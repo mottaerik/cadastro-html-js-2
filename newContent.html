@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <title>HTML + JAVASCRIPT</title>
+    </head>
+
+    <body>
+        <form>
+            <!--INPUT PARA TEXTOS-->
+            <input type="text" id="nome"/> ->TEXTOS
+            <br>
+
+            <!--INPUT PARA NÚMEROS-->
+            <input type="number"/> ->NÚMEROS
+            <br>
+
+            <!--INPUT PARA EMAILS-->
+            <input type="email"/> ->EMAILS
+            <br>
+            
+            <!--INPUT APENAS PARA NÚMEROS TELEFÔNICOS-->
+            <input type="tel"/> ->NÚMEROS DE TELEFONE
+            <br>
+
+            <!--INPUT PARA SENHAS-->
+            <input type="password"> ->SENHAS
+            <br>
+
+            <!--INPUT PARA DATAS-->
+            <input type="date"> ->DATAS
+            <br>
+
+            <!--INPUT PARA DATAS + HORAS-->
+            <input type="datetime-local"> ->DATA + HORA
+            <br>
+
+            <!--INPUT PARA CAIXA DE SELEÇÃO-->
+            <input type="checkbox"> ->CAIXA DE SELEÇÃO
+            <br>
+
+            <!--INPUT PARA BOLINHA DE SELEÇÃO (tipo a caixa de seleção)-->
+            <input type="radio"> ->BOLINHA DE SELEÇÃO
+            <br> 
+
+            <!--INPUT PARA BOLINHA DE SELEÇÃO (nomeando o input)-->
+            <input type="radio" name="genero">
+            <input type="radio" name="genero"> ->APENAS UMA SELEÇÃO<!--COLOCANDO NOMES IGUAIS PARA AS BOLINHAS, O SITE NÃO DEIXA MARCAR MAIS DE UMA BOLINHA QUE TIVER O MESMO NOME-->
+            <br>
+
+            <!--INPUT PARA ARQUIVOS-->
+            <input type="file"> ->ESCOLHER ARQUIVOS
+            <br>
+
+            <!--INPUT PARA ESCOLHER COR-->
+            <input type="color"> ->ESCOLHER COR
+            <br>
+
+            <!--INPUT PARA ESCOLHER HORA E MINUTOS-->
+            <input type="time"> ->HORA E MINUTOS
+            <br>
+
+            <!--INPUT PARA CRIAR BOTÃO-->
+            ->FORMAS DE CRIAR UM BOTÃO:
+            <input type="button" value="teste"> menos usado
+            <button>teste</button> mais usado
+            <br>
+
+            <!--INPUT PARA UPLOAD--> 
+            <input type="submit"> ->NÃO É MAIS COMUM UTILIZAR O SUBMIT <!--na verdade se usa o botão junto alguma função para enviar dados ao invés do submit-->
+            <br>
+
+
+            <textarea></textarea> ->PARA TEXTOS MAIORES <!--PARA INPUTS MAIS EXTENSOS, PARA TEXTOS MAIS EXTENSOS E ETC. (exemplo: um comentário de um vídeo no Youtube)-->
+            <br>
+
+            <select> <!--PARA SELEÇÃO DE INFORMAÇÕES/ESCOLHA DE UMA OPÇÃO-->
+                <option>Selecione</option>
+                <option>Comércio</option>
+                <option>Indústria</option>
+                <option>Outros</option>
+            </select>->SELEÇÃO DE OPÇÕES
+
+            <script> /*PARA COLOCAR JAVASCRIPT DE FORMA SIMPLES E BRUTA DENTRO DO HTML*/
+                console.log("teste");
+            </script>
+
+            <script src="arquivoJS.js">/*PUXANDO UM ARQUIVO JAVASCRIPT QUE ESTA DENTRO DA MESMA PASTA QUE O ARQUIVO HTML*/
+
+            </script>
+
+        </form><!--TAG form USAR QUANDO HAVER FORMULÁRIO-->
+    </body>
+
+</html>

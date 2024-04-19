@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cadastro de Usuário</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    form {
+        margin: 50px;
+        max-width: 300px;
+        padding: 0%;
+
+    }
+    input[type="text"], input[type="data"], input[type="email"], input[type="senha"] {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        box-sizing: border-box;
+    }
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        background-color: #001eff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+<form id="registrationForm">
+    <h2>Cadastro de Usuário</h2>
+    <label for="nome">Nome:</label>
+    <input required type="text" id="nome" maxlength="6" name="nome"><br>
+    <label for="data">Data:</label>
+    <input type="date" id="data" name="data" required>
+    <br><br>
+    <label for="data">Email:</label><br>
+    <input type="text" id="email" name="email" required><br>
+    <label for="password">Senha:</label><br>
+    <input type="text" id="senha" name="senha" required><br>
+
+    <form onsubmit="return Salvar()">
+        <button>Salvar</button>
+    </form>
+
+    <div id="tabelaCadastro"></div>
+    <script src="./index.js"></script>
+</form>
+
+<div id="userData"></div>
+
+<script>
+    // Função para lidar com o envio do formulário
+    document.getElementById('registrationForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Evita o envio padrão do formulário
+
+        // Obter os valores dos campos de entrada
+        var nome = document.getElementById('nome').value;
+        var data = document.getElementById('data').value;
+        var email = document.getElementById('email').value;
+        var senha = document.getElementById('senha').value;
+
+        // Criar um objeto para armazenar os dados do usuário
+        var userData = {
+            nome: nome,
+            data: data,
+            email: email,
+            senha: senha
+        };
+
+        // Limpar os campos de entrada
+        document.getElementById('nome').value = '';
+        document.getElementById('data').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('senha').value = '';
+
+        // Exibir os dados na tela
+        document.getElementById('userData').innerHTML = '<h3>Dados do Usuário:</h3>' +
+                                                        '<p><strong>Nome:</strong> '+userData.nome+'</p>'+
+                                                        '<p><strong>Data:</strong> '+userData.data+'</p>'+
+                                                        '<p><strong>Email:</strong> '+userData.email+'</p>'+
+                                                        '<p><strong>Senha:</strong> '+userData.senha+'</p>';
+    });                                                 
+
+</script>
+
+</body>
+</html>
